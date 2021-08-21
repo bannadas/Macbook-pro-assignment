@@ -8,6 +8,21 @@
 
     <!-- bootstrap stylesheet -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .selected{
+            border: 1px solid gray;
+            border-radius: 5px;
+            padding: 5px;
+        }
+        .selected:hover{
+            background-color: black;
+            color: white;
+            border: 3px solid gray;
+        }
+        #apply-btn:hover{
+            border: 1px solid tomato;
+        }
+    </style>
 
 </head>
 <body>
@@ -25,44 +40,48 @@
                    <!-- memory -->
                    <div>
                        <h2 class="text-2xl font-medium pb-2">Memory</h2>
-                       <input id="8gb-memory" class="border p-1" type="text" placeholder="8GB unified memory">
-                       <input id="16gb-memory" class="border p-1" type="text" placeholder="16GB unified memory">
+                           <button id="8gb-memory" class=" selected">8GB unified memory</button>
+                       <button id="16gb-memory" class=" selected">16GB unified memory</button>
                    </div>
                    <!-- storage -->
                    <div>
                        <h2 class="pt-8 text-2xl font-medium pb-2">Storage</h2>
-                       <input id="256gb-storage" class="border p-1" type="text" placeholder="256GB SSD storage">
-                       <input id="512gb-storage" class="border p-1" type="text" placeholder="512GB SSD storage">
-                       <input id="1tb-storage" class="border p-1" type="text" placeholder="1TB SSD storage">
+                       <button id="256gb-storage" class=" selected">256GB SSD storage</button>
+                       <button id="512gb-storage" class=" selected">512GB SSD storage</button>
+                       <button id="1tb-storage" class="selected">1TB SSD storage</button>   
                    </div>
                    <!-- delivery option -->
                    <div>
                     <h2 class="pt-8 text-2xl font-medium pb-2">Choose your delivery option</h2>
-                       <input id="delivery-free" class="border w-72 p-1" type="text" placeholder="Friday,Aug 25 FREE Prime Delivery">
-                       <input id="delivery-twenty" class="border w-72 p-1" type="text" placeholder="Friday,Aug 21 Delivery Chrage $20">
+                       <button id="delivery-free" class=" selected">Friday,Aug 25 FREE Prime Delivery</button>
+                       <button id="delivery-twenty" class=" selected">Friday,Aug 21 Delivery Chrage $20</button>
                    </div>
 
                    <!-- price section -->
 
                    <div>
                        <div class="grid grid-cols-2 pt-8 pb-4">
-                           <div font-medium>
+                           <div>
                             <p  class="font-bold pb-3">Best Price</p>
+                            <hr class="border-gray-200">
                             <p class="font-bold pb-3 ">Extra Memory Cost</p>
+                            <hr class="border-gray-200">
                             <p class="font-bold pb-3">Extra Storage Cost</p>
+                            <hr class="border-gray-200">
                             <p class="font-bold pb-3">Delivery charge</p>
-                            <hr class="border-black ">
+                            <hr class="border-black">
                             <p class="font-bold ">Total Price</p>
                            </div>
-                           
-
-
+                
                            <div>
                             <p class="pb-3 font-bold">$<span id="best-price">1299</span></p>
+                            <hr class="border-gray-200 w-16">
                             <p class="pb-3 font-bold">$<span id="memory-cost">0</span></p>
+                            <hr class="border-gray-200 w-16">
                             <p class="pb-3 font-bold">$<span id="storage-cost">0</span></p>
+                            <hr class="border-gray-200 w-16">
                             <p class="pb-3 font-bold">$<span id="delivery-charge">0</span></p>
-                            <hr class="border-black ">
+                            <hr class="border-black w-16">
                             <p  class="pb-3 font-bold">$<span id="total-price">1299</span></p>
                            </div>
                        </div>
@@ -73,14 +92,12 @@
                    <div>
                       <small>Add promo code</small>
                       <div>
-                        <input id="promo-input" class="border p-1" type="text">
-                        <button id="apply-btn" class="bg-red-500 p-1 rounded text-white">Apply</button>
+                        <input id="promo-input" class="border p-2" type="text">
+                        <button id="apply-btn" class=" bg-red-500 p-2 rounded text-white">Apply</button>
                       </div>
                    </div>
                 </div>
-
-               
-               
+  
             </div>
             <div>
                 <h2 class=" text-3xl text-center font-medium pt-8">Total:$<span id="total">1299</span></h2>
